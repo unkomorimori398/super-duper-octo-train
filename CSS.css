@@ -1,12 +1,12 @@
 * {
     margin: 0;
-    padding:0;
+    padding: 0;
     box-sizing: border-box;
     font-family: "Open Sans", sans-serif;
 }
 
-body{
-    background-color:bisque;
+body {
+    background-color: bisque;
 }
 
 .card {
@@ -14,35 +14,74 @@ body{
     flex-direction: column;
     align-items: center;
     background-color: #fff;
-    box-shadow: 0 0 5px rgba(0,0,0,0.8);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
     width: 60vw;
-    height: 50vh;
     margin: 100px auto;
     padding: 50px;
+    text-align: center;
 }
 
-.card h2{
+.card h2 {
     font-size: 1.5em;
 }
 
-.card .choice{
-    margin-top: 100px;
+.choice {
+    margin-top: 20px;
     display: flex;
-    justify-content: space-around;
-    width: 100%;
+    flex-wrap: wrap; /* 横幅に収まらないボタンを折り返す */
+    justify-content: center;
+    gap: 10px; /* ボタン間の間隔 */
 }
 
-.card .choice button{
-    border: 1px solid rgba(0,0,0);
+.choice button {
+    border: 1px solid rgba(0, 0, 0);
     padding: 10px 20px;
     cursor: pointer;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     outline: none;
     background-color: #fff;
-    width: 150px;
+    width: 120px; /* ボタン幅を調整 */
 }
 
-.card .choice :hover{
+.choice button:hover {
     box-shadow: 0px 12px 24px #0b5dae63;
     transform: translateY(-4px);
+}
+
+.choice button:disabled {
+    background-color: #ccc;
+    color: #888;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+/* 〇×画像の表示 */
+.feedback-container {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.popup {
+    display: none; /* 初期状態は非表示 */
+    width: 100px; /* 画像サイズ調整 */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 小さい画面用（スマホなど） */
+@media (max-width: 768px) {
+    .card {
+        width: 90vw;
+        height: auto;
+        padding: 20px;
+    }
+
+    .choice button {
+        width: 100px; /* ボタン幅を小さく調整 */
+        font-size: 0.9em;
+    }
 }

@@ -1,27 +1,22 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="ja">
 <head>
-    <meta charaset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="CSS.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
     <title>クイズ坂本</title>
 </head>
-    
 <body>
     <div class="card">
-        <h1 id="title">坂本悠志人生クイズ　ドボン問題</h1>
+        <h1 id="title">坂本悠志人生クイズ ドボン問題</h1>
         <h2 id="question2">坂本悠志の人生に影響を与えた人物・事物は？</h2>
         <div class="choice">
             <button>尾崎豊</button>
             <button>フリーホラーゲーム</button>
             <button>アリエッティ</button>
             <button>プラレール</button>
-            <button>そうだ、旅に行こう</button>
+            <button>そうだ、旅に行こう</button> <!-- ドボン -->
             <button>平昌五輪</button>
             <button>色とり忍者(めちゃイケのコーナー)</button>
             <button>オズの魔法使い</button>
@@ -30,12 +25,11 @@
         </div>
     </div>
 
-    <!-- <div class="wrap">
-        <p class="img"><img src="正解.png" alt="正解" class="popup"></p>
-        <p class="img"><img src="不正解.png" alt="不正解" class="popup"></p>
-    </div> -->
-
-    <a href="拡大表示画像のリンク" data-lightbox="group"><img src="サイトに表示する画像のリンク"></a>
+    <!-- フィードバック用の画像 -->
+    <div class="feedback-container">
+        <img id="correctImg" src="正解.png" alt="正解" class="popup">
+        <img id="wrongImg" src="不正解.png" alt="不正解" class="popup">
+    </div>
 
     <script src="main.js"></script>
 </body>
